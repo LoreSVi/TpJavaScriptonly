@@ -11,33 +11,43 @@ Toastify({
         background: "linear-gradient(to right, #00b09b, #96c93d)",
       },
 }).showToast()
+
 inputNombre.value = ''
 inputApellido.value = ''
-console.log(usuario)
-}
+};
 
-
-const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
+const shopContent = document.getElementById('shop-Content')
 
 let carrito = [];
-productos.forEach((product) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `
-    <img src="${product.img}">
-        <h3>${product.nombre}</h3>
-        <p class="price">${product.precio} $</p>
-        `;
 
-        shopContent.append(content);
+const boton = document.getElementById('todos');
+const listaProductos = document.querySelector("#lista-productos");
+
+boton.onclick = () => {
+    fetch('/productos/data.json')
+    .then((response) => response.json())
+    .then(data => {
+        const productos = response.results
+        data.forEach((product)=> {
+            const li = document.createElement('li)')
+            li.innerHTML = `
+            <img src="${product.img}">
+            <h3>${product.nombre}</h3>
+            <p class="price">${product.precio} $</p>
+            `
+          listaProductos.append(li)
+})
+    })
+
+
 
         let comprar = document.createElement("button");
         comprar.innerText = "comprar";
         comprar.className = "comprar";
 
-        content.append(comprar);
+        listaProductos.append(comprar);
 
         comprar.addEventListener("click", () => {
                carrito.push({
@@ -55,8 +65,7 @@ productos.forEach((product) => {
                 style: {
                     background: "linear-gradient(to right, #00b09b, #96c93d)"},
             }).showToast()  
-        }); 
-});
+        })
 
 verCarrito.addEventListener("click", () => {
 modalContainer.innerHTML = "";  
