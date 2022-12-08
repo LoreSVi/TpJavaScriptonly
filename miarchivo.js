@@ -3,17 +3,18 @@ const inputApellido = document.getElementById('apellido');
 const botonDatos = document.getElementById('botonDatos')
 
 botonDatos.onclick = () => {
-const usuario = {
-    nombre: inputNombre.value,
-    apellido: inputApellido.value
-}
+Toastify({
+    text: `Hola ${inputNombre.value+" " +inputApellido.value}`,
+    duration: 2000,
+    position:"center",
+    style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+}).showToast()
 inputNombre.value = ''
 inputApellido.value = ''
 console.log(usuario)
-
-localStorage.setItem('InfoUsuario',JSON.stringify(usuario))
 }
-
 
 
 const shopContent = document.getElementById("shopContent");
@@ -39,14 +40,22 @@ productos.forEach((product) => {
         content.append(comprar);
 
         comprar.addEventListener("click", () => {
-            carrito.push({
+               carrito.push({
                 id: product.id,
                 img: product.img,
                 nombre: product.nombre,
                 precio: product.precio,
             });
             console.log(carrito);
-        });
+            Toastify({
+                text: `Producto Agregado al carrito`,
+                gravity: "bottom", 
+                duration: 2000,
+                position:"center",
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)"},
+            }).showToast()  
+        }); 
 });
 
 verCarrito.addEventListener("click", () => {
