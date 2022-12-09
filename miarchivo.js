@@ -16,25 +16,18 @@ botonDatos.onclick = () => {
     inputApellido.value = ''
 };
 
-const listaTop3 = document.getElementById('lista-top3');
-const boton = document.getElementById('boton');
+const lista = document.querySelector("#lista-top3");
 
-/*boton.onclick = () => {
     fetch("./data.json")
         .then((response) => response.json())
-        .then(response =>{
-        
-            const top3 = response.results
-            top3.forEach(top3=>){
-
-                const li = document.createElement('li')
+        .then(data => {
+            data.forEach(product => {
+             const li = document.createElement('li')
               li.innerText = product.nombre + " -$" + product.precio;
-                lista.append(li)
-            })
+                lista.append(li);
+            });
         })
-        .catch((error) => console.log(error))
-    }
-*/
+    
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
