@@ -27,6 +27,16 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 480px){
+    .nav-container {
+        display: inline-block;
+        justify-content: space-around;
+        align-items: column;
+        padding: 1rem;
+        margin: 1rem
+    }
+}
+
 .ver-carrito {
     font-size: 25px;
     margin-right: 20px;
