@@ -23,7 +23,7 @@ const lista = document.querySelector("#lista-top3");
         .then(data => {
             data.forEach(product => {
              const li = document.createElement('li')
-              li.innerText = product.nombre + " -$" + product.precio;
+              li.innerText = product.nombre;
                 lista.append(li);
             });
         })
@@ -71,7 +71,7 @@ modalHeader.innerHTML =
 modalContainer.append(modalHeader);
 
 const modalbutton = document.createElement("h1");
-modalbutton.innerText = "x";
+modalbutton.innerText = "Xcerrar";
 modalbutton.className = "modal-header-button";
 
 modalbutton.addEventListener('click', () => {

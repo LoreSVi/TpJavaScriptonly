@@ -6,6 +6,15 @@ body {
     background-image: linear-gradient(90deg, rgba(236,160,205,1) 0%, rgba(221,162,169,1) 30%, rgba(191,131,223,1) 50%, rgba(226,121,171,1) 80%, rgba(244,218,214,1) 100%);
 
 }
+@media (max-width: 480px){
+    .modal-container {
+        display: inline-block;
+        justify-content: space-around;
+        align-items: column;
+        padding: 1rem;
+        margin: 1rem
+    }
+}
 /*navbar*/
 .nav-container {
     position: sticky;
@@ -15,13 +24,15 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    height: 12vh;
- background-color: rgb(206, 12, 164);
+  padding: 10px;
+ background-color: rgb(192, 36, 70);
 }
-
+.navbar h3{
+    color:blanchedalmond
+}
 .navbar-logo {
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 10px;
     color:bisque;
     margin-top: 4vh;
     cursor: pointer;
@@ -39,7 +50,7 @@ body {
 
 .ver-carrito {
     font-size: 25px;
-    margin-right: 20px;
+    margin-left: 5px;
     margin-top: 4vh;
     cursor: pointer;
 }
@@ -47,7 +58,7 @@ body {
 .banner {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     background-image: url("https://i.ytimg.com/vi/QG79v_GRccc/maxresdefault.jpg");
 } 
 
@@ -85,11 +96,14 @@ body {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+  width: 200px;
     margin: auto;
+    padding-top: 20px;
     text-align: center;
-    font-family: arial;
-    background-color: rgba(108, 117, 244, 0.751);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aliceblue;
+    background-color: rgb(192, 36, 70);
+    border-radius: 8%;
 }
 
 .card > img {
@@ -98,7 +112,7 @@ body {
 }
 
 .price {
-    color: rgb(78, 37, 228);
+    color: rgb(200, 192, 228);
     font-size: 20px;
 }
 
@@ -107,7 +121,7 @@ body {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(238, 35, 204);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -120,26 +134,25 @@ body {
 
 /*modal estilos*/
 .modal-container {
-    width: 40%;
-    background-color: rgb(245, 218, 218);
+    width: 50%;
+    background-color: rgb(235, 101, 130);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10 10%;
-    max-height: 50vh;
-    color:rgb(162, 110, 31);
+    margin-left: 60vh;
+    color:white;
     position: fixed;
     overflow: auto;
-    z-index: 9;
-    top: 12vh;
+    z-index: 10;
+    top: 22vh;
     scrollbar-color: none;
 }
 
 .modal-header {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(163, 33, 33);
-    color: antiquewhite;
+    background-color: rgb(228, 171, 225);
+    color:rgb(235, 69, 69);
     width: 100%;
 }
 
@@ -156,8 +169,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    margin: 8px;
+    width: 60%;
+    margin-top: 8px;
 }
 
 .modal-container > div > img {

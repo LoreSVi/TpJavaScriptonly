@@ -1,5 +1,5 @@
 [
-    { "id": "1", "nombre":"cartera", "precio":2000 },
+    { "id": "1", "nombre":"cartera", "precio":2000},
     { "id": "3", "nombre": "mochila", "precio": 4000 },     
     {  "id": "4", "nombre": "labial",  "precio": 200 }    
 ]

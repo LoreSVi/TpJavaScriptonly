@@ -29,13 +29,6 @@ const productos = [
         },
     {
         id: 5,
-        nombre: "esmalte",
-         precio:230,
-         img:"https://ar.todomoda.com/media/catalog/product/7/6/76217301_1_1_20211110180753.jpg?quality=75&bg-color=255,255,255&fit=bounds&height=841&width=657&canvas=657:841",
-         cantidad: 1,
-        },
-    {
-        id: 6,
         nombre:"collar",
          precio:160,
          img: "https://ar.todomoda.com/media/catalog/product/7/8/78743902_1_1_20221020210035.jpg?quality=75&bg-color=255,255,255&fit=bounds&height=841&width=657&canvas=657:841",
